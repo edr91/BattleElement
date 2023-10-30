@@ -5,15 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Battle Element</title>
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
     <h1>Battle Element 🔥💧🌱</h1>
-    <p>
-        <button>Fire 🔥</button>
-        <button>Water 💧</button>
-        <button>Plant 🌱</button>
-    </p>
+    <section id="choose-monster">
+        <h2>Choose your monster:</h2>
+
+        <label for="Hipodoge">Hipodoge</label>
+        <input type="radio" name="monster" id="Hipodoge" />
+        <label for="Capipepo">Capipepo</label>
+        <input type="radio" name="monster" id="Capipepo" />
+        <label for="Ratigueya">Ratigueya</label>
+        <input type="radio" name="monster" id="Ratigueya" />
+
+        <button>Select</button>
+    </section>
+    <section id="choose-attack">
+        <h2>Attack:</h2>
+        <p>Your monster has <span>3</span> lifes</p>
+        <p>Enemy monster has <span>3</span> lifes</p>
+        <p>
+            <button>Fire 🔥</button>
+            <button>Water 💧</button>
+            <button>Plant 🌱</button>
+        </p>
+    </section>
+    <section id="message">
+        <p>Your monster Attack with Fire, </p>
+    </section>
+    <section id="restart">
+        <button>Restart</button>
+    </section>
 </body>
 
 </html>
