@@ -13,6 +13,8 @@ function selecMonsterPlayer() {
         alert('You selected Capipepo')
     } else if (inputRatigueya.checked) {
         alert('You selected Ratigueya')
+    } else {
+        alert('Please choose a Monster!')
     }
 }
 window.addEventListener('load', startGame)
