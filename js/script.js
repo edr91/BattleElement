@@ -1,8 +1,18 @@
 function startGame() {
-    let buttonMonsterplayer = document.getElementById('choose-monster')
+    let buttonMonsterplayer = document.getElementById('button-monster')
     buttonMonsterplayer.addEventListener('click', selecMonsterPlayer)
 }
 function selecMonsterPlayer() {
-    alert('you chose this monster')
+    let inputHipodoge = document.getElementById('Hipodoge')
+    let inputCapipepo = document.getElementById('Capipepo')
+    let inputRatigueya = document.getElementById('Ratigueya')
+
+    if (inputHipodoge.checked) {
+        alert('You selected Hipodoge')
+    } else if (inputCapipepo.checked) {
+        alert('You selected Capipepo')
+    } else if (inputRatigueya.checked) {
+        alert('You selected Ratigueya')
+    }
 }
 window.addEventListener('load', startGame)
