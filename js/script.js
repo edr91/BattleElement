@@ -6,13 +6,14 @@ function selecMonsterPlayer() {
     let inputHipodoge = document.getElementById('Hipodoge')
     let inputCapipepo = document.getElementById('Capipepo')
     let inputRatigueya = document.getElementById('Ratigueya')
+    let spanMonsterPlayer = document.getElementById('monster-player')
 
     if (inputHipodoge.checked) {
-        alert('You selected Hipodoge')
+        spanMonsterPlayer.innerHTML = 'Hipodoge'
     } else if (inputCapipepo.checked) {
-        alert('You selected Capipepo')
+        spanMonsterPlayer.innerHTML = 'Capipepo'
     } else if (inputRatigueya.checked) {
-        alert('You selected Ratigueya')
+        spanMonsterPlayer.innerHTML = 'Ratigueya'
     } else {
         alert('Please choose a Monster!')
     }
