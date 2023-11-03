@@ -1,6 +1,15 @@
+let attackPlayer
+
 function startGame() {
     let buttonMonsterplayer = document.getElementById('button-monster')
     buttonMonsterplayer.addEventListener('click', selecMonsterPlayer)
+
+    let buttonFire = document.getElementById('button-fire')
+    buttonFire.addEventListener('click', attackFire)
+    let buttonWater = document.getElementById('button-water')
+    buttonWater.addEventListener('click', attackWater)
+    let buttonPlant = document.getElementById('button-plant')
+    buttonPlant.addEventListener('click', attackPlant)
 }
 function selecMonsterPlayer() {
     let inputHipodoge = document.getElementById('Hipodoge')
@@ -30,6 +39,18 @@ function selecMonsterEnemy() {
     } else {
         spanMonsterEnemy.innerHTML = 'Ratigueya'
     }
+}
+function attackFire() {
+    attackPlayer = 'Fire'
+    alert(attackPlayer)
+}
+function attackWater() {
+    attackPlayer = 'Water'
+    alert(attackPlayer)
+}
+function attackPlant() {
+    attackPlayer = 'Plant'
+    alert(attackPlayer)
 }
 function randomMonster(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
