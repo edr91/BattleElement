@@ -17,5 +17,21 @@ function selecMonsterPlayer() {
     } else {
         alert('Please choose a Monster!')
     }
+    selecMonsterEnemy()
+}
+function selecMonsterEnemy() {
+    let attackrandom = randomMonster(1, 3)
+    let spanMonsterEnemy = document.getElementById('monster-enemy')
+
+    if (attackrandom == 1) {
+        spanMonsterEnemy.innerHTML = 'Hipodoge'
+    } else if (attackrandom == 2) {
+        spanMonsterEnemy.innerHTML = 'Capipepo'
+    } else {
+        spanMonsterEnemy.innerHTML = 'Ratigueya'
+    }
+}
+function randomMonster(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
 window.addEventListener('load', startGame)
