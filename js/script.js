@@ -25,7 +25,7 @@ function selecMonsterPlayer() {
     } else if (inputRatigueya.checked) {
         spanMonsterPlayer.innerHTML = 'Ratigueya'
     } else {
-        alert('Please choose a Monster!')
+        createMessage('Please choose a Monster!')
     }
     selecMonsterEnemy()
 }
@@ -63,13 +63,26 @@ function ramdomEnemyAttack() {
     } else {
         enemyAttack = 'Plant'
     }
-    createMessage()
+    finalBattle()
 }
-function createMessage() {
+function finalBattle(){
+    if (enemyAttack == playerAttack) {
+        createMessage("Draw")
+    } else if (playerAttack == 'Fire' && enemyAttack == 'Plant') {
+        createMessage("You win")
+    } else if (playerAttack == 'Water' && enemyAttack == 'Fire') {
+        createMessage("You win")
+    } else if (playerAttack == 'Plant' && enemyAttack == 'Water') {
+        createMessage("You win")
+    } else {
+        createMessage("You lose")
+    }
+}
+function createMessage(result) {
     let sectionMessage = document.getElementById('message')
     let paragraph = document.createElement('p')
 
-    paragraph.innerHTML = 'Your monster Attack with ' + playerAttack + ', the enemy monster attack with ' + enemyAttack + '---------'
+    paragraph.innerHTML = 'Your monster Attack with ' + playerAttack + ', the enemy monster attack with ' + enemyAttack + ' - ' + result
     sectionMessage.appendChild(paragraph)
 }
 function randomAM(min, max) {
