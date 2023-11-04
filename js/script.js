@@ -1,4 +1,5 @@
-let attackPlayer
+let playerAttack
+let enemyAttack
 
 function startGame() {
     let buttonMonsterplayer = document.getElementById('button-monster')
@@ -29,30 +30,41 @@ function selecMonsterPlayer() {
     selecMonsterEnemy()
 }
 function selecMonsterEnemy() {
-    let attackrandom = randomMonster(1, 3)
+    let monsterRandom = randomAM(1, 3)
     let spanMonsterEnemy = document.getElementById('monster-enemy')
 
-    if (attackrandom == 1) {
+    if (monsterRandom == 1) {
         spanMonsterEnemy.innerHTML = 'Hipodoge'
-    } else if (attackrandom == 2) {
+    } else if (monsterRandom == 2) {
         spanMonsterEnemy.innerHTML = 'Capipepo'
     } else {
         spanMonsterEnemy.innerHTML = 'Ratigueya'
     }
 }
 function attackFire() {
-    attackPlayer = 'Fire'
-    alert(attackPlayer)
+    playerAttack = 'Fire'
+    ramdomEnemyAttack()
 }
 function attackWater() {
-    attackPlayer = 'Water'
-    alert(attackPlayer)
+    playerAttack = 'Water'
+    ramdomEnemyAttack()
 }
 function attackPlant() {
-    attackPlayer = 'Plant'
-    alert(attackPlayer)
+    playerAttack = 'Plant'
+    ramdomEnemyAttack()
 }
-function randomMonster(min, max) {
+function ramdomEnemyAttack() {
+    let randomAttack = randomAM(1, 3)
+
+    if (randomAttack == 1) {
+        enemyAttack = 'Fire'
+    } else if (randomAttack = 2) {
+        enemyAttack = 'Water'
+    } else {
+        enemyAttack = 'Plant'
+    }
+}
+function randomAM(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 window.addEventListener('load', startGame)
