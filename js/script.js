@@ -63,6 +63,14 @@ function ramdomEnemyAttack() {
     } else {
         enemyAttack = 'Plant'
     }
+    createMessage()
+}
+function createMessage() {
+    let sectionMessage = document.getElementById('message')
+    let paragraph = document.createElement('p')
+
+    paragraph.innerHTML = 'Your monster Attack with ' + playerAttack + ', the enemy monster attack with ' + enemyAttack + '---------'
+    sectionMessage.appendChild(paragraph)
 }
 function randomAM(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
