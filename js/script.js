@@ -4,6 +4,12 @@ let lifePlayer = 3
 let lifeEnemy = 3
 
 function startGame() {
+    let sectionChooseRestart = document.getElementById('restart')
+    sectionChooseRestart.style.display = 'none'
+
+    let sectionChooseAttack = document.getElementById('choose-attack')
+    sectionChooseAttack.style.display = 'none'
+
     let buttonMonsterplayer = document.getElementById('button-monster')
     buttonMonsterplayer.addEventListener('click', selecMonsterPlayer)
 
@@ -18,6 +24,12 @@ function startGame() {
     RestartB.addEventListener('click', restartTheGame)
 }
 function selecMonsterPlayer() {
+    let sectionChooseMonster = document.getElementById('choose-monster')
+    sectionChooseMonster.style.display = 'none'
+
+    let sectionChooseAttack = document.getElementById('choose-attack')
+    sectionChooseAttack.style.display = 'block'
+
     let inputHipodoge = document.getElementById('Hipodoge')
     let inputCapipepo = document.getElementById('Capipepo')
     let inputRatigueya = document.getElementById('Ratigueya')
@@ -122,9 +134,12 @@ function FinalScoreMessage(finalScore) {
     buttonWater.disabled = true
     let buttonPlant = document.getElementById('button-plant')
     buttonPlant.disabled = true
+
+    let sectionChooseRestart = document.getElementById('restart')
+    sectionChooseRestart.style.display = 'block'
 }
 function restartTheGame() {
- location.reload()
+    location.reload()
 }
 function randomAM(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
