@@ -1,0 +1,12 @@
+.wTitle {
+    color: orange;
+    width: 310px;
+    height: 55px;
+    background-color: teal;
+}
+#choose-monster {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
