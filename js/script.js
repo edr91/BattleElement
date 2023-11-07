@@ -1,5 +1,7 @@
 let playerAttack
 let enemyAttack
+let lifePlayer = 3
+let lifeEnemy = 3
 
 function startGame() {
     let buttonMonsterplayer = document.getElementById('button-monster')
@@ -66,16 +68,27 @@ function ramdomEnemyAttack() {
     finalBattle()
 }
 function finalBattle(){
+    let spanLifePlayer = document.getElementById('player-life')
+    let spanLifeEnemy = document.getElementById('enemy-life')
+
     if (enemyAttack == playerAttack) {
         createMessage("Draw")
     } else if (playerAttack == 'Fire' && enemyAttack == 'Plant') {
         createMessage("You win")
+        lifeEnemy--
+        spanLifeEnemy.innerHTML = lifeEnemy
     } else if (playerAttack == 'Water' && enemyAttack == 'Fire') {
         createMessage("You win")
+        lifeEnemy--
+        spanLifeEnemy.innerHTML = lifeEnemy
     } else if (playerAttack == 'Plant' && enemyAttack == 'Water') {
         createMessage("You win")
+        lifeEnemy--
+        spanLifeEnemy.innerHTML = lifeEnemy
     } else {
         createMessage("You lose")
+        lifePlayer--
+        spanLifePlayer.innerHTML = lifePlayer
     }
 }
 function createMessage(result) {
