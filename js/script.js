@@ -67,7 +67,7 @@ function ramdomEnemyAttack() {
     }
     finalBattle()
 }
-function finalBattle(){
+function finalBattle() {
     let spanLifePlayer = document.getElementById('player-life')
     let spanLifeEnemy = document.getElementById('enemy-life')
 
@@ -90,12 +90,27 @@ function finalBattle(){
         lifePlayer--
         spanLifePlayer.innerHTML = lifePlayer
     }
+    LifeScore()
+}
+function LifeScore() {
+    if (lifeEnemy == 0) {
+        FinalScoreMessage('<----------You Win!---------->')
+    } else if (lifePlayer == 0) {
+        FinalScoreMessage('<----------You Lose---------->')
+    }
 }
 function createMessage(result) {
     let sectionMessage = document.getElementById('message')
     let paragraph = document.createElement('p')
 
     paragraph.innerHTML = 'Your monster Attack with ' + playerAttack + ', the enemy monster attack with ' + enemyAttack + ' - ' + result
+    sectionMessage.appendChild(paragraph)
+}
+function FinalScoreMessage(finalScore) {
+    let sectionMessage = document.getElementById('message')
+    let paragraph = document.createElement('p')
+
+    paragraph.innerHTML = finalScore
     sectionMessage.appendChild(paragraph)
 }
 function randomAM(min, max) {
