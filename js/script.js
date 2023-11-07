@@ -115,6 +115,13 @@ function FinalScoreMessage(finalScore) {
 
     paragraph.innerHTML = finalScore
     sectionMessage.appendChild(paragraph)
+
+    let buttonFire = document.getElementById('button-fire')
+    buttonFire.disabled = true
+    let buttonWater = document.getElementById('button-water')
+    buttonWater.disabled = true
+    let buttonPlant = document.getElementById('button-plant')
+    buttonPlant.disabled = true
 }
 function restartTheGame() {
  location.reload()
