@@ -13,6 +13,9 @@ function startGame() {
     buttonWater.addEventListener('click', attackWater)
     let buttonPlant = document.getElementById('button-plant')
     buttonPlant.addEventListener('click', attackPlant)
+
+    let RestartB = document.getElementById('button-restart')
+    RestartB.addEventListener('click', restartTheGame)
 }
 function selecMonsterPlayer() {
     let inputHipodoge = document.getElementById('Hipodoge')
@@ -112,6 +115,9 @@ function FinalScoreMessage(finalScore) {
 
     paragraph.innerHTML = finalScore
     sectionMessage.appendChild(paragraph)
+}
+function restartTheGame() {
+ location.reload()
 }
 function randomAM(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
