@@ -1,12 +1,40 @@
+body {
+    background-color: #454955
+}
 .wTitle {
-    color: orange;
+    background-color: #3f7d20;
+    color: #151112;
     width: 310px;
     height: 55px;
-    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #choose-monster {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.monster-card {
+    text-align: center;
+    width: 100px;
+    height: 45px;
+    background: cornflowerblue;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 2px solid;
+}
+input {
+    display: none;
+}
+.button-all {
+    box-sizing: border-box;
+    width: 78px;
+    height: 40px;
+    background: #f3eff5;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid;
 }
