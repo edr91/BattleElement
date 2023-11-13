@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Titillium+Web:wght@400;600&display=swap');
 body {
-    background-color: #454955
+    color: #F0F0F0;
+    background-color: #3C486B;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 .wTitle {
-    background-color: #3f7d20;
-    color: #151112;
-    width: 310px;
-    height: 55px;
+    font-size: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.subtitle {
+    font-size: 40px;
+
 }
 #choose-monster {
     display: flex;
@@ -16,15 +21,20 @@ body {
     justify-content: center;
     align-items: center;
 }
+.cards {
+    display: flex;
+    gap: 10px;
+}
 .monster-card {
     text-align: center;
-    width: 100px;
-    height: 45px;
-    background: cornflowerblue;
+    width: 240px;
+    height: 200px;
+    background: #F45050;
     padding: 10px;
     box-sizing: border-box;
     margin: 10px;
     border: 2px solid;
+    border-radius: 15px;
 }
 input {
     display: none;
