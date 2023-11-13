@@ -34,6 +34,7 @@ body {
     box-sizing: border-box;
     margin: 10px;
     border: 2px solid;
+    border-color: #F9D949;
     border-radius: 15px;
 }
 input {
